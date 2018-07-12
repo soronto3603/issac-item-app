@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/main_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="#343434"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </View>
+    <EditText
+        android:id="@+id/search_edit_bar"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="150px"
+        app:layout_constraintTop_toTopOf="@+id/main_top_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/main_top_bar"
+        android:background="@drawable/my_editbox"
+        android:textCursorDrawable="@drawable/my_editbox_cursor"
+        android:padding="20px"
+        android:maxLines="1"
+        android:minLines="1"
+        android:lines="1">
+
+    </EditText>
+    <ImageView
+        android:id="@+id/menu_icon_btn"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:clickable="true"
+        android:layout_marginTop="35px"
+        android:layout_marginRight="35px"
+        app:layout_constraintLeft_toRightOf="@id/search_edit_bar"
+        app:layout_constraintTop_toTopOf="@id/search_edit_bar"
+        android:src="@drawable/search_icon">
+    </ImageView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_marginTop="190px"
+        app:layout_constraintTop_toBottomOf="@id/search_edit_bar"
+        app:layout_constraintLeft_toLeftOf="@id/search_edit_bar"/>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
